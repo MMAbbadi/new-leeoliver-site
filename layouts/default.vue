@@ -4,7 +4,7 @@
         <div class="cabecalho" id="cabecalho" >
             <NuxtLink to="Home">Home</NuxtLink>
             <NuxtLink to="Clipes">Clipes</NuxtLink>
-            <div class="logo"><img src="" alt="">LeeOliver.com</div>
+            <div class="logo"><NuxtLink to="Home"><img src="" alt="">LeeOliver.com</NuxtLink></div>
             <NuxtLink to="Sobre">Sobre</NuxtLink>
             <NuxtLink to="Contato">Contato e Midias</NuxtLink>
         </div>
@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 *{
     box-sizing: border-box;
     margin: 0;
@@ -45,10 +45,11 @@ export default {
 
 #rodape{
     background-color: green;
-    height: 55px;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     padding: 11px;
+    height: 169px;
+    width: 100%;
 }
 </style>

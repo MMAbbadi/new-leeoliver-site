@@ -1,70 +1,75 @@
 <template>
-    <div>
-        <div class="streams">
-
-            <div id="btnvoltar" class="botao">
-                <button class="voltar" @click="">
-                    voltar
+    <div class="corpo">
+        <div class="container">
+            <div class="carrossel">
+                <button @click="current=current==0 ? 0: current-1"
+                class="btn-voltar">
+                    <img src="" :alt="voltar">voltar
+                </button>
+                <ul class="video-conteiner">
+                    <li v-for="video in videos" 
+                    :key="video.id"> 
+                        {{video.el}}
+                    </li>
+                </ul>
+                <button 
+                @click="current = current === videos.lenght ? current :current +1"
+                class="btn-avancar">
+                    <img src="" :alt="voltar">avancar
                 </button>
             </div>
-
-            <ul class="lives">
-                <li class="livestream">
-                    <h3 class="titulo-live">V1</h3>
-                    <video controls src=""></video>
-                </li>
-                <li class="livestream">
-                    <h3 class="titulo-live">V2</h3>
-                    <video controls src=""></video>
-                </li>
-                <li class="livestream">
-                    <h3 class="titulo-live">V3</h3>
-                    <video controls src=""></video>
-                </li>
-            </ul>
-
-            <div id="btnavancar" class="botao">
-                <button class="avancar" @click="">
-                    avancar
-                </button>
-            </div>
-
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    
+    name: 'Home',
+    data(){
+        return{
+            videos:[{
+                id:1,
+                el: './assets/videos/video1.mp4',
+                nome: 'video1'
+            },{
+                id:2,
+                el: './assets/videos/video2.mp4',
+                nome: 'video2'
+            },{
+                id:3,
+                el: './assets/videos/video3.mp4',
+                nome: 'video3'
+            }
+            ],
+            current: 0,
+        }
+    },
 }
 </script>
 
-<style>
+<style scoped>
+.carrossel{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 
+}
+</style>
+
+<style>
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
 ul{
     list-style: none;
 }
-
-.streams{
-    display: flex;
+.corpo{
+    margin: 50px;
+    min-height: 650px;
+    justify-items: center;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
 }
-
-.lives{
-    height: 864px;
-    width: 960px;
-    position: relative;
-}
-
-.livestream{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-}
-
 </style>
