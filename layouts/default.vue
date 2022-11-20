@@ -4,7 +4,7 @@
         <div class="cabecalho" id="cabecalho" >
             <NuxtLink to="Home">Home</NuxtLink>
             <NuxtLink to="Clipes">Clipes</NuxtLink>
-            <div class="logo"><NuxtLink to="Home"><img src="" alt="">LeeOliver.com</NuxtLink></div>
+            <div class="logo"><NuxtLink to="Home"><img id="logo" src="~/assets/images/logo.png" alt="logo">LeeOliver.com</NuxtLink></div>
             <NuxtLink to="Sobre">Sobre</NuxtLink>
             <NuxtLink to="Contato">Contato e Midias</NuxtLink>
         </div>
@@ -51,5 +51,13 @@ export default {
     padding: 11px;
     height: 169px;
     width: 100%;
+}
+#logo{
+    height: 33px;
+    border-radius: 20px;
+}
+.logo{
+    align-items: center;
+    gap: 5px;
 }
 </style>
