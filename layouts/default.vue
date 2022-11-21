@@ -4,7 +4,14 @@
         <div class="cabecalho" id="cabecalho" >
             <NuxtLink to="Home">Home</NuxtLink>
             <NuxtLink to="Clipes">Clipes</NuxtLink>
-            <div class="logo"><NuxtLink to="Home"><img id="logo" src="~/assets/images/logo.png" alt="logo">LeeOliver.com</NuxtLink></div>
+            <div class="logo">
+                <h3>
+                    <img id="logo" src="~/assets/images/logo.png" alt="logo"/>
+                    <NuxtLink to="Home">
+                        LeeOliver.com
+                    </NuxtLink>
+                </h3>
+            </div>
             <NuxtLink to="Sobre">Sobre</NuxtLink>
             <NuxtLink to="Contato">Contato e Midias</NuxtLink>
         </div>
@@ -33,8 +40,13 @@ export default {
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 #cabecalho{
-    background-color: green;
+    background-color: #290338;
+    background-image: linear-gradient(transparent 50%, black);
     justify-content: center;
     align-content: center;
     display: flex;
@@ -44,7 +56,9 @@ export default {
 }
 
 #rodape{
-    background-color: green;
+    background-color: #290338;
+    background-image: linear-gradient(black 30%,transparent 60%);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,7 +71,8 @@ export default {
     border-radius: 20px;
 }
 .logo{
-    align-items: center;
+    align-content: center;
+    justify-content: center;
     gap: 5px;
 }
 </style>

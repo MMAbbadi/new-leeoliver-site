@@ -71,6 +71,7 @@ ul{
 }
 
 .corpo{    
+    background-image: linear-gradient(black 30%,transparent 60%);
     min-height: 750px;
     justify-items: center;
     align-items: center;
